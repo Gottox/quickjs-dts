@@ -1,0 +1,18 @@
+{
+  "name": "@types/quickjs",
+  "version": "0.0.0",
+  "description": "quickjs definitions for typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paxys/quickjs-dts.git"
+  },
+  "author": "Enno Boland <mail@eboland.de",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/paxys/quickjs-dts/issues"
+  },
+  "homepage": "https://github.com/paxys/quickjs-dts#readme",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
+}
