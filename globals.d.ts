@@ -16,3 +16,7 @@ declare const console: {
 	 */
 	log: typeof print
 };
+
+interface ImportMeta {
+	url: string;
+}
