@@ -12,7 +12,10 @@
     "url": "https://github.com/paxys/quickjs-dts/issues"
   },
   "homepage": "https://github.com/paxys/quickjs-dts#readme",
-  "dependencies": {
-    "typescript": "^4.8.4"
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0"
   }
 }

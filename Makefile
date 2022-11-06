@@ -13,4 +13,5 @@ node_modules: package.json
 	@touch node_modules
 
 test: node_modules
+	$(BIN)/eslint .
 	$(BIN)/tsc -p .
