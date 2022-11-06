@@ -288,8 +288,7 @@ declare module "os" {
 	 * Return `[str, err]` where `str` is the link target and `err` the error
 	 * code.
 	 */
-	export function readlink(target: string, linkpath: string):
-		ResultTuple<string>;
+	export function readlink(path: string): ResultTuple<string>;
 	/**
 	 * Return `[array, err]` where `array` is an array of strings containing
 	 * the filenames of the directory `path`. `err` is the error code.
