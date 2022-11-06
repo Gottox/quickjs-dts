@@ -18,7 +18,7 @@ declare module "os" {
 	type WaitStatus = number;
 	type OpenOption = number;
 	type Result<T> = T | NegativeErrno;
-	type ResultTuple<T> = [T, Success] | [unknown, Errno];
+	type ResultTuple<T> = [T, Success | Errno];
 	type Signal = number & { __brand: "Signal" };
 	type Pid = number & { __brand: "Pid" };
 	type Callback = () => void;
