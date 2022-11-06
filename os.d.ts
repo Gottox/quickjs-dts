@@ -95,7 +95,7 @@ declare module "os" {
 	/**
 	 * Open a file. Return a handle or `< 0` if error.
 	 */
-	export function open(filename: string, flags?: OpenOption): Result<FileDescriptor>;
+	export function open(filename: string, flags?: OpenOption, mode?: number): Result<FileDescriptor>;
 	/**
 	 * POSIX open flags.
 	 */
