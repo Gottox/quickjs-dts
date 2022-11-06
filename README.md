@@ -1,10 +1,21 @@
 # quickjs-dts
 [quickjs](https://bellard.org/quickjs/) typescript definitions.
 
+* [x] documented source based on the
+  [official documentation](https://bellard.org/quickjs/quickjs.html)
+* [x] meaningful types, that may even can be used for compile time checking 
+  once typescript supports
+  [math intrinsic types](https://github.com/microsoft/TypeScript/pull/48198)
+* [x] liberal license.
+
+#### TODO
+
+* [ ] add more tests to verify the behavior.
+
 ## installation
 
 ```bash
-npm install --save-dev typescript Gottox/quickjs-dts
+npm install --save-dev Gottox/quickjs-dts
 ```
 
 tsconfig.json
