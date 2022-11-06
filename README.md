@@ -4,7 +4,7 @@
 ## installation
 
 ```bash
-npm install --save-dev typescript paxys/quickjs-dts
+npm install --save-dev typescript Gottox/quickjs-dts
 ```
 
 tsconfig.json

@@ -4,14 +4,14 @@
   "description": "quickjs definitions for typescript",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paxys/quickjs-dts.git"
+    "url": "git+https://github.com/Gottox/quickjs-dts.git"
   },
   "author": "Enno Boland <mail@eboland.de",
   "license": "0BSD",
   "bugs": {
-    "url": "https://github.com/paxys/quickjs-dts/issues"
+    "url": "https://github.com/Gottox/quickjs-dts/issues"
   },
-  "homepage": "https://github.com/paxys/quickjs-dts#readme",
+  "homepage": "https://github.com/Gottox/quickjs-dts#readme",
   "devDependencies": {
     "typescript": "^4.8.4",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
