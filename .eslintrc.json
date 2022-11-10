@@ -14,11 +14,13 @@
 		"sourceType": "module"
 	},
 	"plugins": [
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"eslint-plugin-tsdoc"
 	],
 	"rules": {
 		"@typescript-eslint/triple-slash-reference": "off",
 		"@typescript-eslint/no-explicit-any": "off",
+		"tsdoc/syntax": "warn",
 		"indent": [
 			"error",
 			"tab"

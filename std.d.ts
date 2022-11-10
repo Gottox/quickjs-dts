@@ -5,7 +5,10 @@
 declare module "std" {
 	import { FileDescriptor, ExitStatus, Errno } from "os";
 
-	interface File {
+	/**
+	 * FILE prototype
+	 */
+	export interface FILE {
 		/**
 		 * Close the file. Return 0 if OK or `-errno` in case of I/O error.
 		 */
@@ -88,7 +91,7 @@ declare module "std" {
 		putByte(c: number): number;
 	}
 
-	interface EvalOptions {
+	export interface EvalOptions {
 		/**
 		 * Boolean (default = `false`). If `true`, error backtraces do not list
 		 * the stack frames below the evalScript.
@@ -96,11 +99,11 @@ declare module "std" {
 		backtrace_barrier?: boolean;
 	}
 
-	interface ErrorObj {
+	export interface ErrorObj {
 		errno?: number;
 	}
 
-	interface UrlGetOptions {
+	export interface UrlGetOptions {
 		/**
 		 * Boolean (default = `false`). If `true`, the response is an
 		 * ArrayBuffer instead of a string. When a string is returned, the
@@ -118,13 +121,16 @@ declare module "std" {
 		full?: boolean;
 	}
 
-	interface UrlGetResponse<T> {
+	export interface UrlGetResponse<T> {
 		response: T | null;
 		status: number;
 		responseHeaders: string;
 	}
 
-	type FileResult = File | null;
+	/**
+	 * Result that either represents a FILE or null on error.
+	 */
+	export type FILEResult = FILE | null;
 
 	/**
 	 * Exit the process.
@@ -149,7 +155,7 @@ declare module "std" {
 	 * `errno` property to the error code or to 0 if no error occured.
 	 */
 	export function open(filename: string, flags: string, errorObj?: ErrorObj):
-		FileResult;
+		FILEResult;
 	/**
 	 * Open a process by creating a pipe (wrapper to the libc `popen()`).
 	 * Return the `FILE` object or `null` in case of I/O error. If `errorObj`
@@ -157,7 +163,7 @@ declare module "std" {
 	 * if no error occured.
 	 */
 	export function popen(command: string, flags: string, errorObj?: ErrorObj):
-		FileResult;
+		FILEResult;
 	/**
 	 * Open a file from a file handle (wrapper to the libc `fdopen()`). Return
 	 * the `FILE` object or `null` in case of I/O error. If `errorObj` is not
@@ -165,13 +171,13 @@ declare module "std" {
 	 * error occured.
 	 */
 	export function fdopen(fd: FileDescriptor, flags: string,
-		errorObj?: ErrorObj): FileResult;
+		errorObj?: ErrorObj): FILEResult;
 	/**
 	 * Open a temporary file. Return the `FILE` object or `null` in case of I/O
 	 * error. If `errorObj` is not undefined, set its `errno` property to the
 	 * error code or to 0 if no error occured.
 	 */
-	export function tmpfile(errorObj?: ErrorObj): File;
+	export function tmpfile(errorObj?: ErrorObj): FILE;
 	/**
 	 * Equivalent to `std.out.puts(str)`.
 	 */
@@ -184,7 +190,7 @@ declare module "std" {
 	 * Equivalent to the libc `sprintf()`.
 	 */
 	export function sprintf(format: string, ...args: any[]): string;
-	const $in: File;
+	const $in: FILE;
 	/**
 	 * Wrappers to the libc file `stdin`, `stdout`, `stderr`.
 	 */
@@ -192,11 +198,11 @@ declare module "std" {
 	/**
 	 * Wrappers to the libc file `stdin`, `stdout`, `stderr`.
 	 */
-	export const out: File;
+	export const out: FILE;
 	/**
 	 * Wrappers to the libc file `stdin`, `stdout`, `stderr`.
 	 */
-	export const err: File;
+	export const err: FILE;
 	/**
 	 * Constants for seek().
 	 */
@@ -282,7 +288,7 @@ declare module "std" {
 	 * - unquoted properties (ASCII-only Javascript identifiers)
 	 * - trailing comma in array and object definitions
 	 * - single quoted strings
-	 * - \f and \v are accepted as space characters
+	 * - \\f and \\v are accepted as space characters
 	 * - leading plus in numbers
 	 * - octal (0o prefix) and hexadecimal (0x prefix) numbers
 	 */

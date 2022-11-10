@@ -6,7 +6,12 @@
 
 BIN = node_modules/.bin
 
+SRC = globals.d.ts os.d.ts std.d.ts
+
 all: test
+
+docs: node_modules $(SRC)
+	$(BIN)/typedoc --out docs $(SRC)
 
 node_modules: package.json
 	npm install --package-lock=false
@@ -15,3 +20,6 @@ node_modules: package.json
 test: node_modules
 	$(BIN)/eslint .
 	$(BIN)/tsc -p .
+
+clean:
+	rm -rf docs
