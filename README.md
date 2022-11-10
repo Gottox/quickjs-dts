@@ -29,3 +29,9 @@ tsconfig.json
   "files": ["./main.mts"]
 }
 ```
+
+## resources
+
+* [Github](https://github.com/Gottox/quickjs-dts/)
+* [QuickJS](https://bellard.org/quickjs/)
+* [Official QuickJS Documentation](https://bellard.org/quickjs/quickjs.html)
