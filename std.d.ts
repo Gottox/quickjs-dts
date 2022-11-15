@@ -261,11 +261,10 @@ declare module "std" {
 	 */
 	export function getenviron(): { [key: string]: string };
 	/**
-	 * Download url using the curl command line utility. options is an
-	 * optional object containing the following optional properties:
+	 * Download url using the curl command line utility.
 	 */
 	export function urlGet(url: string,
-		options?: UrlGetOptions & { full?: false, binary?: false }): string | null;
+		options?: UrlGetOptions): string | null;
 	/**
 	 * Download url using the curl command line utility.
 	 */
