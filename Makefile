@@ -22,4 +22,4 @@ test: node_modules
 	$(BIN)/tsc -p .
 
 clean:
-	rm -rf docs
+	rm -rf docs node_modules

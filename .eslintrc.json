@@ -1,4 +1,5 @@
 {
+	"ignorePatterns": ["docs/**"],
 	"env": {
 		"es2021": true
 	},
